@@ -24,7 +24,10 @@ export default function Blog() {
 
           <div className="flex w-full flex-col items-center gap-12">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="flex max-w-xl flex-col items-center gap-2 text-center">
+              <article
+                key={post.slug}
+                className="flex max-w-xl flex-col items-center gap-2 text-center"
+              >
                 <Link
                   href={`/blog/${post.slug}`}
                   className="group text-xl font-mono text-foreground hover:opacity-70 transition-opacity"
