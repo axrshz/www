@@ -1,5 +1,5 @@
 ---
-title: "Everything you need to know about LLM Inference."
+title: "Everything you need to know about LLM Inference"
 date: "2024-03-15"
 ---
 
