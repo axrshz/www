@@ -5,15 +5,17 @@ import { usePathname } from 'next/navigation'
 
 export function Nav() {
   const pathname = usePathname()
-  const backHref = pathname === "/blog" ? "/" : "/blog"
+  const isBlogIndex = pathname === "/blog"
+  const href = isBlogIndex ? "/" : "/blog"
+  const label = isBlogIndex ? "← home" : "← all posts"
 
   return (
     <nav className="absolute top-6 left-6">
       <Link
-        href={backHref}
+        href={href}
         className="text-foreground hover:opacity-70 transition-opacity font-mono text-sm"
       >
-        ← back
+        {label}
       </Link>
     </nav>
   )

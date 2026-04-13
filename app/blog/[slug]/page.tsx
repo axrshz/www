@@ -2,7 +2,6 @@ import { Nav } from "@/components/nav";
 import { getPostBySlug, getPostSlugs } from "@/lib/blog";
 import { format, parseISO } from "date-fns";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
@@ -57,15 +56,6 @@ export default async function BlogPostPage({ params }: Props) {
           className="w-full text-center font-mono text-sm leading-relaxed text-muted-foreground [&_p]:mb-4 [&_p:last-child]:mb-0 [&_strong]:text-foreground [&_ul]:list-inside [&_ul]:text-center"
         >
           <ReactMarkdown>{post.content}</ReactMarkdown>
-        </div>
-
-        <div className="mt-14">
-          <Link
-            href="/blog"
-            className="text-primary font-mono text-sm hover:opacity-70 transition-opacity"
-          >
-            ← All posts
-          </Link>
         </div>
       </article>
     </main>
