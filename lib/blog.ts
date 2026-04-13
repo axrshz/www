@@ -8,7 +8,6 @@ export type PostMeta = {
   slug: string;
   title: string;
   date: string;
-  excerpt: string;
 };
 
 export type Post = PostMeta & {
@@ -20,7 +19,6 @@ function parseMeta(slug: string, data: Record<string, unknown>): PostMeta {
     slug,
     title: String(data.title ?? ""),
     date: String(data.date ?? ""),
-    excerpt: String(data.excerpt ?? ""),
   };
 }
 
@@ -48,7 +46,7 @@ export function getAllPosts(): PostMeta[] {
     .map((slug) => {
       const post = getPostBySlug(slug);
       return post
-        ? { slug: post.slug, title: post.title, date: post.date, excerpt: post.excerpt }
+        ? { slug: post.slug, title: post.title, date: post.date }
         : null;
     })
     .filter((p): p is PostMeta => p !== null)

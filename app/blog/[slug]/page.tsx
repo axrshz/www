@@ -12,13 +12,19 @@ export async function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
 }
 
+function metaDescription(title: string, content: string): string {
+  const oneLine = content.replace(/\s+/g, " ").trim();
+  if (!oneLine) return title;
+  return oneLine.length > 160 ? `${oneLine.slice(0, 157)}…` : oneLine;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post" };
   return {
     title: post.title,
-    description: post.excerpt,
+    description: metaDescription(post.title, post.content),
   };
 }
 

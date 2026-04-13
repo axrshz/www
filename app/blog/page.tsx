@@ -34,9 +34,6 @@ export default function Blog() {
                 <p className="text-xs font-mono text-muted-foreground">
                   {formatPostDate(post.date)}
                 </p>
-                <p className="text-sm font-mono text-muted-foreground leading-relaxed">
-                  {post.excerpt}
-                </p>
               </article>
             ))}
           </div>
