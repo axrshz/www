@@ -83,7 +83,7 @@ export default function Home() {
             </p>
             <p>
               I also try to stay updated with the latest AI progress and keep a
-              full stack understanding of how everything worksfrom research to
+              full stack understanding of how everything works from research to
               infra to application layer.
             </p>
             <p>
