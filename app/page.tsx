@@ -7,9 +7,9 @@ export default function Home() {
       <div className="w-full max-w-2xl">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Profile Image */}
-          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-muted ring-1 ring-border">
+          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-background">
             <Image
-              src="/profile.png"
+              src="/icon.png"
               alt="Adarsh"
               width={96}
               height={96}
