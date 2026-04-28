@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -6,18 +5,6 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6">
       <div className="w-full max-w-2xl">
         <div className="flex flex-col items-center text-center space-y-8">
-          {/* Profile Image */}
-          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-background">
-            <Image
-              src="/icon.png"
-              alt="Adarsh"
-              width={96}
-              height={96}
-              className="h-full w-full object-cover"
-              priority
-            />
-          </div>
-
           {/* Name and Social Icons */}
           <div className="flex flex-col items-center gap-3">
             <h1 className="text-2xl font-mono">Adarsh</h1>
